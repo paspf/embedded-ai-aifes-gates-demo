@@ -1,0 +1,3 @@
+[submodule "aifes-gates-cube-project/AIfES-models/AIfES_for_Arduino"]
+	path = aifes-gates-cube-project/AIfES-models/AIfES_for_Arduino
+	url = https://github.com/Fraunhofer-IMS/AIfES_for_Arduino.git
