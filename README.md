@@ -12,8 +12,9 @@ The demo application includes the following features:
 
 ## Setup
 Clone git:
+```
 git clone git@github.com:paspf/embedded-ai-aifes-gates-demo.git --recursive
-
+```
 Replace the aifes configuration by copying:
 ```
 aifes-gates-cube-project\AIfES-models\AIfES_for_Arduino\etc\aifes_configurations\pc\aifes_config.c
