@@ -29,3 +29,19 @@ and remove:
 ```
 aifes-gates-cube-project\AIfES-models\AIfES_for_Arduino\src\aifes_config.cpp
 ```
+
+## Program Output
+When running the program, the command line output should look similar to this:
+```
+test_and_gate_f32
+|[0.0, 0.0]|[0]| -> 0.000019 -> Pass
+|[0.0, 1.0]|[0]| -> 0.017244 -> Pass
+|[1.0, 0.0]|[0]| -> 0.018041 -> Pass
+|[1.0, 1.0]|[1]| -> 0.965991 -> Pass
+test_and_gate_q7
+|[0.0, 0.0]|[0]| -> 0.003906 -> Pass
+|[0.0, 1.0]|[0]| -> 0.035156 -> Pass
+|[1.0, 0.0]|[0]| -> 0.035156 -> Pass
+|[1.0, 1.0]|[1]| -> 0.937500 -> Pass
+```
+Where the outputs of the floating point model are indicated with f32 and the outputs of the quantized model with q7.

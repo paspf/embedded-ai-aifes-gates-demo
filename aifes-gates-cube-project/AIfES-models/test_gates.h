@@ -28,7 +28,7 @@ void test_xor_gate_q7();
 
 
 int float_prediction_to_binary_int(const float prediction);
-int print_single_prediction(const float *x_input, const int y_ref, const int y_pred);
+int print_single_prediction(const float *x_input, const int y_ref, const float y_pred_float, int y_pred_int);
 int predict(void (*model_inference)(float*, float *), const int* output_data_reference);
 
 #endif // TEST_GATES_G

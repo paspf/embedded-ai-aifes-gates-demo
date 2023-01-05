@@ -183,17 +183,18 @@ int float_prediction_to_binary_int(const float prediction) {
  *
  * @param x_input x-network input.
  * @param y_ref   y-network reference.
- * @param y_pred  y-network output.
+ * @param y_pred_float  y-network output as float.
+ * @param y_pred_int y-network output as int.
  * @return 1 if y_pred matches y_ref.
  */
-int print_single_prediction(const float *x_input, const int y_ref, const int y_pred) {
-    if (y_ref == y_pred) {
-        printf("|[%.1f, %.1f]|[%d]| -> %d -> True\n", x_input[0], x_input[1],
-                y_ref, y_pred);
+int print_single_prediction(const float *x_input, const int y_ref, const float y_pred_float, int y_pred_int) {
+    if (y_ref == y_pred_int) {
+        printf("|[%.1f, %.1f]|[%d]| -> %f -> Pass\n", x_input[0], x_input[1],
+                y_ref, y_pred_float);
         return 1;
     }
-    printf("|[%.1f, %.1f]|[%d]| -> %d -> False\n", x_input[0], x_input[1],
-            y_ref, y_pred);
+    printf("|[%.1f, %.1f]|[%d]| -> %f -> Fail\n", x_input[0], x_input[1],
+            y_ref, y_pred_float);
     return 0;
 }
 
@@ -213,7 +214,7 @@ int predict(void (*model_inference)(float*, float *), const int* output_data_ref
         model_inference(input_data[i], &y_pred);
 
         int y_int = float_prediction_to_binary_int(y_pred);
-        if (print_single_prediction(input_data[i], output_data_reference[i], y_int) == 0) {
+        if (print_single_prediction(input_data[i], output_data_reference[i], y_pred, y_int) == 0) {
             // Set return value to 0 if a prediction does not match its reference.
             ret = 0;
         }
