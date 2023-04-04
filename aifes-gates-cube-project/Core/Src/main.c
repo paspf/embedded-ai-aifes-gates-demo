@@ -6,7 +6,7 @@
   * 				  Program to test the usage of AIfES on a STM32-L476RG as
   * 				  stand-alone application.
   * @author			: paspf
-  * @date			: 2023-01-02
+  * @date			: 2023-03-29
   * @copyright		: paspf, GNU General Public License v3.0
   ******************************************************************************
   */

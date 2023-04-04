@@ -3,7 +3,7 @@
  * @file            : io_gate.c
  * @brief           : Map a gate to gpio ports.
  * @author			: paspf
- * @date			: 2022-01-02
+ * @date			: 2023-04-03
  * @copyright		: paspf, GNU General Public License v3.0
  ******************************************************************************
  */

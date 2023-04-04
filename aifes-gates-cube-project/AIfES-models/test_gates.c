@@ -3,7 +3,7 @@
   * @file           : test_gates.c
   * @brief          : Test neural networks, trained to represent logical gates.
   * @author			: paspf
-  * @date			: 2023-01-02
+  * @date			: 2023-04-01
   * @copyright		: paspf, GNU General Public License v3.0
   ******************************************************************************
   */
@@ -25,6 +25,7 @@
 const uint32_t len_input_data = 4;
 float input_data[4][2] = { { 0, 0 }, { 0, 1 }, { 1, 0 }, { 1, 1 } };
 
+/* Reference output data */
 const int output_data_and_gate[] = { 0, 0, 0, 1 };
 const int output_data_nor_gate[] = { 1, 1, 1, 0 };
 const int output_data_or_gate[] = { 0, 1, 1, 1 };
@@ -187,7 +188,7 @@ int float_prediction_to_binary_int(const float prediction) {
  * @param y_pred_int y-network output as int.
  * @return 1 if y_pred matches y_ref.
  */
-int print_single_prediction(const float *x_input, const int y_ref, const float y_pred_float, int y_pred_int) {
+int print_single_prediction(const float *x_input, const int y_ref, const float y_pred_float, const int y_pred_int) {
     if (y_ref == y_pred_int) {
         printf("|[%.1f, %.1f]|[%d]| -> %f -> Pass\n", x_input[0], x_input[1],
                 y_ref, y_pred_float);
