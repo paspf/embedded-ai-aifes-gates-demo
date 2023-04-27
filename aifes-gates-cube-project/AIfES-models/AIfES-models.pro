@@ -59,7 +59,9 @@ SOURCES += \
         AIfES_for_Arduino/src/basic/express/aifes_express_f32_fnn.c \
         AIfES_for_Arduino/src/basic/express/aifes_express_q7_fnn.c \
         main.c \
-        test_gates.c
+        mnist_data.c \
+        test_gates.c \
+        test_mnist.c
 
 
 DISTFILES += \
@@ -71,6 +73,10 @@ HEADERS += \
     AIfES-and-gate-float/aifes_e_f32_weights.h \
     AIfES-and-gate-q7/aifes_e_q7_fnn.h \
     AIfES-and-gate-q7/aifes_e_q7_weights.h \
+    AIfES-mnist-dense-float/aifes_e_f32_fnn.h \
+    AIfES-mnist-dense-float/aifes_e_f32_weights.h \
+    AIfES-mnist-dense-q7/aifes_e_q7_fnn.h \
+    AIfES-mnist-dense-q7/aifes_e_q7_weights.h \
     AIfES-nor-gate-float/aifes_e_f32_fnn.h \
     AIfES-nor-gate-float/aifes_e_f32_weights.h \
     AIfES-nor-gate-q7/aifes_e_q7_fnn.h \
@@ -146,6 +152,7 @@ HEADERS += \
     AIfES_for_Arduino/src/basic/express/aifes_express_q7_fnn.h \
     AIfES_for_Arduino/src/core/aifes_core.h \
     AIfES_for_Arduino/src/core/aifes_math.h \
-    test_gates.h
+    test_gates.h \
+    test_mnist.h
 
 INCLUDEPATH += AIfES_for_Arduino/src/

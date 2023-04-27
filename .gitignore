@@ -12,3 +12,4 @@ tf-models/xor-gate
 tf-models/*.h5
 tf-models/*.json
 aifes-gates-cube-project/AIfES-models/AIfES-models.pro.user
+tf-models/mnist-dense

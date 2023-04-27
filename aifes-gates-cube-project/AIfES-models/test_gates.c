@@ -22,8 +22,8 @@
 #include "AIfES-xor-gate-q7/aifes_e_q7_fnn.h"
 
 /* Test data */
-const uint32_t len_input_data = 4;
-float input_data[4][2] = { { 0, 0 }, { 0, 1 }, { 1, 0 }, { 1, 1 } };
+static const uint32_t len_input_data = 4;
+static float input_data[4][2] = { { 0, 0 }, { 0, 1 }, { 1, 0 }, { 1, 1 } };
 
 /* Reference output data */
 const int output_data_and_gate[] = { 0, 0, 0, 1 };
